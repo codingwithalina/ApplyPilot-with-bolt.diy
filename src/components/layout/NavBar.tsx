@@ -38,7 +38,7 @@ export function NavBar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center">
-            <img src="/lovable-uploads/caa47739-26a5-4760-b1d5-7159f3904807.png" alt="ApplyPilot Logo" className="h-10" />
+            <img src="/images/logo.png" alt="ApplyPilot Logo" className="h-10" />
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-4">
