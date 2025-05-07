@@ -78,7 +78,7 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 - [ ] Assessment Center
 - [ ] Mit KI Vorstellungsgespräche üben
 
-# Asset Handling
+# Handling files skipped in bolt
 
 In diesem Projekt werden Binärdateien (Bilder, Icons, Fonts etc.) im `public/`-Ordner in einigen Umgebungen (z. B. Bolt.new Workspace) nicht automatisch importiert oder ausgeliefert. Damit die Assets in Entwicklung und Produktion verfügbar sind, steht folgende Option zur Verfügung:
 
