@@ -77,3 +77,29 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 - [ ] Lebenslauf erstellen, falls keiner vorhanden ist (mit KI)
 - [ ] Assessment Center
 - [ ] Mit KI Vorstellungsgespräche üben
+
+# Asset Handling
+
+In diesem Projekt werden Binärdateien (Bilder, Icons, Fonts etc.) im `public/`-Ordner in einigen Umgebungen (z. B. Bolt.new Workspace) nicht automatisch importiert oder ausgeliefert. Damit die Assets in Entwicklung und Produktion verfügbar sind, steht folgende Option zur Verfügung:
+
+## 1. über github
+
+Kurz und allgemein gesagt, gehst du so vor, um deine Bilder und Icons öffentlich per URL auszuliefern:
+
+1. **Projekt ins öffentliche Git-Repo packen**  
+   Leg dein Projekt (inkl. `public/`-Ordner mit all deinen Assets) auf GitHub oder GitLab – Hauptbranch (z. B. `main`) reicht.
+
+2. **CDN-Link erzeugen**  
+   Verwende einen “Git-CDN” wie jsDelivr oder UNPKG. Die allgemeine Form für jsDelivr lautet:
+   ```text
+   https://cdn.jsdelivr.net/gh/<User>/<Repo>@<Branch>/<Pfad-im-Repo>
+   ```
+    ***Setz an <User> deinen Nutzernamen, <Repo> den Repo-Namen und <Pfad-im-Repo> den relativen Pfad zur Datei (z. B. public/images/logo.png).***
+
+3. **URLs in deinem Code ersetzen**
+   Such überall in HTML-/JSX-/CSS-Dateien nach lokalen Pfaden wie /favicon.ico oder /images/... und tausche sie gegen die erstellten CDN-URLs aus.
+
+4. **App neu starten / deployen**
+   Wenn du lokal entwickelst, reicht ein Neustart des Dev-Servers. In der Produktion ziehst du dann keine lokalen public/-Dateien mehr, sondern lädst sie vom CDN.
+
+Damit sind deine Binärdateien (Icons, JPGs, PNGs etc.) weltweit über eine feste URL erreichbar und du musst sie nicht mehr lokal in public/ verwalten.
