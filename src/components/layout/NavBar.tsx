@@ -38,29 +38,42 @@ export function NavBar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <div className="flex items-center space-x-2">
           <Link to="/" className="flex items-center">
-            <img src="/images/logo.png" alt="ApplyPilot Logo" className="h-10" />
+            <img
+              src="https://cdn.jsdelivr.net/gh/codingwithalina/ApplyPilot-with-bolt.diy@main/public/images/logo.png"
+              alt="ApplyPilot Logo"
+              className="h-10"
+            />
           </Link>
         </div>
         <nav className="hidden md:flex items-center space-x-4">
-          <Link to="/" className="text-gray-300 hover:text-applypilot-teal transition-colors dark:text-gray-300 dark:hover:text-applypilot-teal">
+          <Link
+            to="/"
+            className="text-gray-300 hover:text-applypilot-teal transition-colors dark:text-gray-300 dark:hover:text-applypilot-teal"
+          >
             Home
           </Link>
-          <button 
-            onClick={() => scrollToSection('testimonials')} 
+          <button
+            onClick={() => scrollToSection("testimonials")}
             className="text-gray-300 hover:text-applypilot-green transition-colors dark:text-gray-300 dark:hover:text-applypilot-green"
           >
             Testimonials
           </button>
-          <button 
-            onClick={() => scrollToSection('pricing')} 
+          <button
+            onClick={() => scrollToSection("pricing")}
             className="text-gray-300 hover:text-applypilot-blue transition-colors dark:text-gray-300 dark:hover:text-applypilot-blue"
           >
             Pricing
           </button>
-          <Link to="/profile" className="text-gray-300 hover:text-applypilot-green transition-colors dark:text-gray-300 dark:hover:text-applypilot-green">
+          <Link
+            to="/profile"
+            className="text-gray-300 hover:text-applypilot-green transition-colors dark:text-gray-300 dark:hover:text-applypilot-green"
+          >
             Profile
           </Link>
-          <Link to="/jobs" className="text-gray-300 hover:text-applypilot-blue transition-colors dark:text-gray-300 dark:hover:text-applypilot-blue">
+          <Link
+            to="/jobs"
+            className="text-gray-300 hover:text-applypilot-blue transition-colors dark:text-gray-300 dark:hover:text-applypilot-blue"
+          >
             Jobs
           </Link>
         </nav>
@@ -75,7 +88,11 @@ export function NavBar() {
               {theme === "dark" ? "Dark" : "Light"}
             </span>
           </div>
-          <Button asChild variant="outline" className="border-applypilot-teal text-applypilot-teal hover:bg-applypilot-teal/10 dark:border-applypilot-teal dark:text-applypilot-teal dark:hover:bg-applypilot-teal/10">
+          <Button
+            asChild
+            variant="outline"
+            className="border-applypilot-teal text-applypilot-teal hover:bg-applypilot-teal/10 dark:border-applypilot-teal dark:text-applypilot-teal dark:hover:bg-applypilot-teal/10"
+          >
             <Link to="/profile">Create Profile</Link>
           </Button>
         </div>

@@ -265,7 +265,7 @@ const Homepage = () => {
 
           <div className="max-w-lg mx-auto mb-8">
             <ImageSection
-              imagePath="/images/application.jpg"
+              imagePath="https://cdn.jsdelivr.net/gh/codingwithalina/ApplyPilot-with-bolt.diy@main/public/images/application.jpg"
               altText="Stack of accepted applications"
               caption="Join thousands of successful job seekers"
               height="h-64"
