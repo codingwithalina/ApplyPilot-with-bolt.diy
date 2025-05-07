@@ -3,6 +3,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
+import LottieAnimation from "@/components/common/LottieAnimation";
+
 import {
   Accordion,
   AccordionContent,
@@ -46,6 +48,9 @@ const Homepage = () => {
             cover letters using AI to increase your chances of landing your
             dream job.
           </p>
+
+          <LottieAnimation />
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <Button
               asChild
